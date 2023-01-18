@@ -14,26 +14,27 @@ async function loadMovies(searchTerm) {
 
 function movieList(movies) {
   resultList.innerHTML = "";
-    for(let i = 0; i < movies.length; i++){
-        let movieListItem = document.createElement('div');
-        movieListItem.dataset.id = movies[i].imdbID; // setting movie id in  data-id
-        movieListItem.classList.add('search-list-item');
-        if(movies[i].Poster != "N/A")
-            moviePoster = movies[i].Poster;
-        else 
-            moviePoster = "img-not-found.png";
+  for (let i = 0; i < movies.length; i++) {
+    let movieListItem = document.createElement("div");
+    movieListItem.dataset.id = movies[i].imdbID; // setting movie id in  data-id
+    movieListItem.classList.add("search-list-item");
+    movieListItem.classList.add("col");
+    if (movies[i].Poster != "N/A") moviePoster = movies[i].Poster;
+    else moviePoster = "img-not-found.png";
 
-        movieListItem.innerHTML = `
-        <div class = "search-item-thumbnail">
+    movieListItem.innerHTML = `
+        
+          <div class = "search-item-thumbnail">
             <img src = "${moviePoster}">
-        </div>
-        <div class = "search-item-info">
+          </div>
+          <div class = "search-item-info">
             <h3>${movies[i].Title}</h3>
             <p>${movies[i].Year}</p>
-        </div>
+          </div>
+      
         `;
-        resultList.appendChild(movieListItem);
-    }
+    resultList.appendChild(movieListItem);
+  }
 }
 
 function findMovie() {

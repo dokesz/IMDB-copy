@@ -6,11 +6,11 @@
     width: 100%;
 }
 
-.wrapper {
+/*.wrapper {
     background-color: yellow;
     display: flex;
     align-items: flex-end;
-}
+}*/
 
 body {
     background-color: grey;
@@ -22,4 +22,9 @@ body {
     text-align: center;
     gap: 1.5rem;
     margin: 1rem;
+}
+
+nav h3 {
+    color: white;
+    margin: 0;
 }
