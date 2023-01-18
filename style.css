@@ -1,0 +1,20 @@
+.search {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+input {
+    height: 2rem;
+    margin: 10px;
+}
+
+.search-list{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index: 10;
+    cursor: pointer;
+}
