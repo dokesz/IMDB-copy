@@ -24,4 +24,5 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
+    margin: 1rem;
 }
