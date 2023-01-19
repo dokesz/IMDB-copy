@@ -11,11 +11,11 @@ async function movieData(movieID) {
 }
 
 function displayMovieDetails(details) {
-    resultlist.innerHTML = "";
+    resultList.innerHTML = "";
     let movieListItem = document.createElement("div");
     movieListItem.classList.add("col");
-    movieListItem.innerHTML = 
-    `<div class="movie-poster">
+    movieListItem.innerHTML = `
+    <div class="movie-poster">
         <img src="${
         details.Poster != "N/A" ? details.Poster : "../img-not-found.png"
         }" alt="movie-poster">
