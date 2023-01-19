@@ -11,16 +11,13 @@ async function movieData(movieID) {
 }
 
 function displayMovieDetails(details) {
-    resultList.innerHTML = "";
-    let movieListItem = document.createElement("div");
-    movieListItem.classList.add("col");
-    movieListItem.innerHTML = `
-    <div class="movie-poster">
+    resultList.innerHTML = `
+    <div class="col-lg-4 col-md-4 col-sm-12">
         <img src="${
         details.Poster != "N/A" ? details.Poster : "../img-not-found.png"
         }" alt="movie-poster">
     </div>
-    <div class="movie-info">
+    <div class="col-lg-6 col-md-6 col-sm-12">
             <h3 class="movie-title">${details.Title}</h3>
         <ul class="movie-misc-info">
             <li class="year">Year: ${details.Year}</li>
@@ -34,7 +31,6 @@ function displayMovieDetails(details) {
         <p class="language"><b>Language: </b> ${details.Language}</p>
         <p class="awards"><b>Awards: <i class="fa-solid fa-award"></i></b> ${details.Awards}</p>
     </div>`;
-    resultList.appendChild(movieListItem);
 }
 
 movieData(movieID);
