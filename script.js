@@ -15,7 +15,7 @@ async function loadMovies(searchTerm) {
   const res = await fetch(`${URL}`);
   const data = await res.json();
   movieList(data.Search);
-  /*console.log(data.Search);*/
+  console.log(data.Search);
 }
 
 function movieList(movies) {
