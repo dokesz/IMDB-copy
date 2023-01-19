@@ -28,3 +28,7 @@ nav h3 {
     color: white;
     margin: 0;
 }
+
+.search-list-item {
+    cursor: pointer;
+}

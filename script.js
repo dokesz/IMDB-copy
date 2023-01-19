@@ -1,6 +1,12 @@
 const movieSelector = document.getElementById("movie-selector");
-const searchList = document.getElementById("search-list");
 const resultList = document.getElementById("result-list");
+
+function findMovie() {
+  let searchTerm = movieSelector.value;
+  if (searchTerm.length > 0) {
+    loadMovies(searchTerm);
+  }
+}
 
 async function loadMovies(searchTerm) {
   const URL = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=643f294a`;
@@ -9,7 +15,7 @@ async function loadMovies(searchTerm) {
   const res = await fetch(`${URL}`);
   const data = await res.json();
   movieList(data.Search);
-  console.log(data.Search);
+  /*console.log(data.Search);*/
 }
 
 function movieList(movies) {
@@ -17,6 +23,7 @@ function movieList(movies) {
   for (let i = 0; i < movies.length; i++) {
     let movieListItem = document.createElement("div");
     movieListItem.dataset.id = movies[i].imdbID; // setting movie id in  data-id
+    /*console.log(movies[i].imdbID);*/
     movieListItem.classList.add("search-list-item");
     movieListItem.classList.add("col");
     if (movies[i].Poster != "N/A") moviePoster = movies[i].Poster;
@@ -35,11 +42,16 @@ function movieList(movies) {
         `;
     resultList.appendChild(movieListItem);
   }
+  loadMovieResultPage();
 }
 
-function findMovie() {
-  let searchTerm = movieSelector.value;
-  if (searchTerm.length > 0) {
-    loadMovies(searchTerm);
-  }
+function loadMovieResultPage() {
+  const searchListItem = resultList.querySelectorAll('.search-list-item');
+  searchListItem.forEach(item => {
+    item.addEventListener('click', async () => {
+      console.log('click');
+      let dir = window.location.origin + "/IMDB-copy/result/resultPage.html"; // Custom URL for result page
+      window.location.href = "https://dokesz.github.io/IMDB-copy/result/resultPage.html"; //Redirect to a new page
+    })
+  })
 }
