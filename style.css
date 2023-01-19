@@ -6,11 +6,11 @@
     width: 100%;
 }*/
 
-/*.wrapper {
-    background-color: yellow;
-    display: flex;
-    align-items: flex-end;
-}*/
+.wrapper {
+    max-width: 99%;
+    margin: auto;
+    padding: 10px;
+}
 
 body {
     background-color: grey;

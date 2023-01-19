@@ -31,10 +31,10 @@ function movieList(movies) {
 
     movieListItem.innerHTML = `
         
-          <div class = "search-item-thumbnail">
+          <div class = "search-item-thumbnail text-center">
             <img src = "${moviePoster}">
           </div>
-          <div class = "search-item-info">
+          <div class = "search-item-info text-center">
             <h3>${movies[i].Title}</h3>
             <p>${movies[i].Year}</p>
           </div>
