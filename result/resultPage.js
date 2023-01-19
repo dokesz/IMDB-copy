@@ -3,7 +3,7 @@ const resultList = document.getElementById("result-list");
 
 async function movieData(movieID) {
   const result = await fetch(
-    `http://www.omdbapi.com/?i=${movieID}&apikey=643f294a`
+    `https://www.omdbapi.com/?i=${movieID}&apikey=643f294a`
   ); //Base URL
   const movieDetails = await result.json();
   displayMovieDetails(movieDetails);
