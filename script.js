@@ -50,6 +50,7 @@ function loadMovieResultPage() {
   searchListItem.forEach(item => {
     item.addEventListener('click', async () => {
       console.log('click');
+      localStorage.setItem('movieID', item.dataset.id);
       let dir = window.location.origin + "/IMDB-copy/result/resultPage.html"; // Custom URL for result page
       window.location.href = "https://dokesz.github.io/IMDB-copy/result/resultPage.html"; //Redirect to a new page
     })
