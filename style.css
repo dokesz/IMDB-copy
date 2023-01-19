@@ -1,10 +1,10 @@
-.search {
+/*.search {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     width: 100%;
-}
+}*/
 
 /*.wrapper {
     background-color: yellow;
@@ -16,13 +16,13 @@ body {
     background-color: grey;
 }
 
-.result {
+/*.result {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
     margin: 1rem;
-}
+}*/
 
 nav h3 {
     color: white;
