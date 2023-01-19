@@ -17,7 +17,7 @@ function displayMovieDetails(details) {
         details.Poster != "N/A" ? details.Poster : "../img-not-found.png"
         }" alt="movie-poster">
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12">
+    <div class="col-lg-6 col-md-6 col-sm-12 text-center">
             <h3 class="movie-title">${details.Title}</h3>
         <ul class="movie-misc-info">
             <li class="year">Year: ${details.Year}</li>
