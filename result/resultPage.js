@@ -7,6 +7,7 @@ async function movieData(movieID) {
   ); //Base URL
   const movieDetails = await result.json();
   displayMovieDetails(movieDetails);
+  console.log(movieID);
 }
 
 function displayMovieDetails(details) {
